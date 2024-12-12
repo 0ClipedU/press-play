@@ -1,0 +1,157 @@
+/game-website
+  /games
+    - game1.html
+    - game2.html
+  /assets
+    - images
+    - styles
+    - scripts
+  - index.html
+  - style.css
+  - script.js
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Collection</title>
+  <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to the Game Hub!</h1>
+  </header>
+
+  <main>
+    <section id="game-list">
+      <div class="game">
+        <a href="games/game1.html">
+          <img src="assets/images/game1.jpg" alt="Game 1">
+          <h3>Game 1</h3>
+        </a>
+      </div>
+      <div class="game">
+        <a href="games/game2.html">
+          <img src="assets/images/game2.jpg" alt="Game 2">
+          <h3>Game 2</h3>
+        </a>
+      </div>
+      <!-- Add more games here -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Game Hub. All Rights Reserved.</p>
+  </footer>
+
+  <script src="assets/scripts/script.js"></script>
+</body>
+</html>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+#game-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.game {
+  margin: 10px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+  width: 200px;
+  transition: transform 0.3s ease;
+}
+
+.game:hover {
+  transform: scale(1.05);
+}
+
+.game img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+h3 {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game 1</title>
+  <link rel="stylesheet" href="../assets/styles/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Game 1</h1>
+  </header>
+
+  <main>
+    <section id="game-container">
+      <iframe src="https://www.example.com/embedded-game" width="800" height="600" frameborder="0"></iframe>
+    </section>
+    <section>
+      <a href="../index.html">Back to Home</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Game Hub. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
+// Example of adding a simple interaction
+document.addEventListener('DOMContentLoaded', () => {
+  const games = document.querySelectorAll('.game');
+  
+  games.forEach(game => {
+    game.addEventListener('mouseover', () => {
+      game.style.transform = 'scale(1.1)';
+    });
+    
+    game.addEventListener('mouseout', () => {
+      game.style.transform = 'scale(1)';
+    });
+  });
+});
+<iframe src="https://examplegame.com/embedded" width="800" height="600" frameborder="0"></iframe>
